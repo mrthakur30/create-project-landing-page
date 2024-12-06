@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../assets/navlogo.svg"
-import { Contact, Phone, PhoneIcon } from "lucide-react";
+import {  PhoneIcon } from "lucide-react";
 const Header: React.FC = ({ onClick }: any) => {
     return (
         <header className="navbar bg-white px-4 lg:px-6">

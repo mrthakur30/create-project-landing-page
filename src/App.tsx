@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import Header from './components/Header';
 import Form from './components/Form';
 import Offerings from './components/Offerings';
@@ -11,7 +11,7 @@ import Image4 from "./assets/architecture/image4.png";
 import Image5 from "./assets/architecture/image5.png";
 import Image6 from "./assets/architecture/image6.png";
 import LeadModel from "./components/LeadModel";
-import { Cross, XCircleIcon } from "lucide-react";
+import {  XCircleIcon } from "lucide-react";
 
 const ArchitectureData = [
   {
