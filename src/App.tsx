@@ -54,7 +54,7 @@ export default function App() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-emerald-50 dark:bg-emerald-950">
+    <div className="flex flex-col min-h-screen bg-emerald-950">
       {/* Header */}
       <Header />
 
@@ -64,10 +64,10 @@ export default function App() {
         <section className="flex md:my-20 justify-center items-center md:flex-row flex-col py-12">
           <div className="text-left">
             <div className="max-w-3xl px-5">
-              <h1 className="md:text-5xl text-3xl font-bold text-emerald-800 dark:text-emerald-100">
+              <h1 className="md:text-5xl text-3xl font-bold text-emerald-100">
                 Transform Your Space, Elevate Your Life
               </h1>
-              <p className="py-6 text-lg text-emerald-700 dark:text-emerald-300">
+              <p className="py-6 text-lg text-emerald-300">
                 Innovative architecture design solutions tailored to your unique style and needs. <br /> Let's
                 create your dream space together.
               </p>
@@ -86,7 +86,7 @@ export default function App() {
         </section>
 
         {/* Services Section */}
-        <section id="services" className="w-full bg-base-200 dark:bg-emerald-900">
+        <section id="services" className="w-full bg-emerald-900">
           <Offerings />
         </section>
 
@@ -105,7 +105,7 @@ export default function App() {
         </section>
 
         {/* Testimonials Section */}
-        <section id="testimonials" className="py-12 w-full bg-base-200 dark:bg-emerald-900">
+        <section id="testimonials" className="py-12 w-full bg-emerald-900">
           <div className="text-center">
             <h1 className="font-bold md:text-[45px] text-white text-[28px] text-center mb-10 w-fit mx-auto">
               What Our Clients Say
@@ -122,7 +122,7 @@ export default function App() {
             <h1 className="font-bold md:text-[45px] text-white text-[28px] text-center mb-10 w-fit mx-auto">
               Ready to Transform Your Space?
             </h1>
-            <p className="py-4 text-lg text-emerald-700 dark:text-emerald-300">
+            <p className="py-4 text-lg text-emerald-300">
               Let's bring your vision to life. Contact us today for a free consultation.
             </p>
             <a className="btn btn-primary" onClick={toggleModal}>Get in Touch</a>
