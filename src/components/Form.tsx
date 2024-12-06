@@ -177,7 +177,7 @@ const Form = () => {
                                     className="border-0 focus:border-0 bg-white focus:outline-none focus:ring-0"
                                 />
                             </div>
-                            <p className="text-xs text-gray-500 mb-4">
+                            <p className="text-xs text-gray-200 mb-4">
                                 By clicking on proceed, you agree to the{" "}
                                 <a href="/terms" className="text-green-600 underline">
                                     Terms of Use
@@ -191,11 +191,11 @@ const Form = () => {
                             <button
                                 onClick={handleSendOtp}
                                 disabled={loading}
-                                className={`btn btn-success w-full ${loading ? "btn-disabled" : ""
+                                className={`btn  bg-yellow-200 hover:bg-yellow-300 w-full text-black ${loading ? "btn-disabled" : ""
                                     }`}
                             >
                                 {loading ? (
-                                    <span className="loading text-white loading-spinner"></span>
+                                    <span className="loading loading-spinner"></span>
                                 ) : (
                                     "Create Project"
                                 )}
@@ -279,7 +279,7 @@ const Form = () => {
                                 placeholder="OTP"
                                 value={otp}
                                 onChange={(e) => setOtp(e.target.value)}
-                                className="input input-bordered bg-white w-full mb-4 p-4 rounded-lg focus:ring-2 focus:ring-green-500"
+                                className="input text-black input-bordered bg-white w-full mb-4 p-4 rounded-lg focus:ring-2 focus:ring-green-500"
                             />
                             {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
                             <button

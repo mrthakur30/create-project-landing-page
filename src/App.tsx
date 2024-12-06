@@ -1,4 +1,4 @@
-
+import React, { useState } from "react";
 import Header from './components/Header';
 import Form from './components/Form';
 import Offerings from './components/Offerings';
@@ -10,40 +10,49 @@ import Image3 from "./assets/architecture/image3.png";
 import Image4 from "./assets/architecture/image4.png";
 import Image5 from "./assets/architecture/image5.png";
 import Image6 from "./assets/architecture/image6.png";
+import LeadModel from "./components/LeadModel";
+import { Cross, XCircleIcon } from "lucide-react";
 
 const ArchitectureData = [
   {
-      text: "Residential",
-      back: Image1,
-      desc: "We Design Memories where Dreams Find a Home"
+    text: "Residential",
+    back: Image1,
+    desc: "We Design Memories where Dreams Find a Home"
   },
   {
-      text: "Retail Spaces",
-      back: Image2,
-      desc: "Designing Spaces that Inspire Shopping Experiences."
+    text: "Retail Spaces",
+    back: Image2,
+    desc: "Designing Spaces that Inspire Shopping Experiences."
   },
   {
-      text: "Office Spaces",
-      back: Image3,
-      desc: "Creating Office Designs that Reflect Your Company's Vision and Values"
+    text: "Office Spaces",
+    back: Image3,
+    desc: "Creating Office Designs that Reflect Your Company's Vision and Values"
   },
   {
-      text: "Apartment Complex",
-      back: Image4,
-      desc: "Designing Urban Sustainable Living, Where Comfort Meets Community"
+    text: "Apartment Complex",
+    back: Image4,
+    desc: "Designing Urban Sustainable Living, Where Comfort Meets Community"
   },
   {
-      text: "Villas & Condos",
-      back: Image5,
-      desc: "Exquisite Living, Unmatched Elegance with Timeless Luxury Redefined"
+    text: "Villas & Condos",
+    back: Image5,
+    desc: "Exquisite Living, Unmatched Elegance with Timeless Luxury Redefined"
   },
   {
-      text: "Hospitality Spaces",
-      back: Image6,
-      desc: "Designing Memorable Experiences in Every Detail"
+    text: "Hospitality Spaces",
+    back: Image6,
+    desc: "Designing Memorable Experiences in Every Detail"
   }
-]
+];
+
 export default function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-emerald-50 dark:bg-emerald-950">
       {/* Header */}
@@ -53,74 +62,88 @@ export default function App() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="flex md:my-20 justify-center items-center md:flex-row flex-col py-12">
-          <div className=" text-left">
+          <div className="text-left">
             <div className="max-w-3xl px-5">
               <h1 className="md:text-5xl text-3xl font-bold text-emerald-800 dark:text-emerald-100">
                 Transform Your Space, Elevate Your Life
               </h1>
               <p className="py-6 text-lg text-emerald-700 dark:text-emerald-300">
-                Innovative interior design solutions tailored to your unique style and needs. <br />Let's
+                Innovative architecture design solutions tailored to your unique style and needs. <br /> Let's
                 create your dream space together.
               </p>
               <div className="flex gap-4">
-                <a href="#services" className="btn btn-secondary">Get Started</a>
-                <a href="#portfolio" className="btn btn-secondary btn-outline">Learn More</a>
+                <a href="https://www.designelementary.in" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">Get Started</a>
+                <a className="btn text-black btn-outline hover:bg-yellow-300 bg-yellow-200" onClick={toggleModal}>Learn More</a>
               </div>
             </div>
           </div>
-
-          <div className=''>
-          <h1 className="md:text-4xl text-3xl md:mb-5 my-4 text-center  font-bold text-emerald-300">
-                Create Project Now !
-              </h1>
+          <div>
+            <h1 className="md:text-[2.7rem] text-3xl md:mb-5 my-4 text-center font-bold text-yellow-200">
+              Create Project Now!
+            </h1>
             <Form />
           </div>
         </section>
 
         {/* Services Section */}
-        <section id="services" className=" w-full bg-base-200 dark:bg-emerald-900">
-           <Offerings />
+        <section id="services" className="w-full bg-base-200 dark:bg-emerald-900">
+          <Offerings />
         </section>
 
         {/* Portfolio Section */}
-        <section id="portfolio" className="py-12 ">
+        <section id="portfolio" className="py-12">
           <div className="text-center">
-          <h1 className="font-bold md:text-[45px] text-white text-[28px] text-center mb-10 w-fit mx-auto">
-          Our Services
+            <h1 className="font-bold md:text-[45px] text-white text-[28px] text-center mb-10 w-fit mx-auto">
+              Our Services
             </h1>
           </div>
-          <div className="grid grid-cols-1 justify-items-center md:grid-cols-2  gap-5">
-          {ArchitectureData.map((item, index) => {
-            return <TextWIthBack {...item} key={index} clasName="w-full" />;
-          })}
+          <div className="grid grid-cols-1 justify-items-center md:grid-cols-2 gap-5">
+            {ArchitectureData.map((item, index) => {
+              return <TextWIthBack {...item} key={index} clasName="w-full" />;
+            })}
           </div>
         </section>
 
         {/* Testimonials Section */}
         <section id="testimonials" className="py-12 w-full bg-base-200 dark:bg-emerald-900">
           <div className="text-center">
-          <h1 className="font-bold md:text-[45px] text-white text-[28px] text-center mb-10 w-fit mx-auto">
-          What Our Clients Say
+            <h1 className="font-bold md:text-[45px] text-white text-[28px] text-center mb-10 w-fit mx-auto">
+              What Our Clients Say
             </h1>
           </div>
           <div className="w-full">
-           <CustomerReviews />
+            <CustomerReviews />
           </div>
         </section>
 
         {/* Contact Section */}
         <section id="contact" className="py-12">
           <div className="text-center">
-          <h1 className="font-bold md:text-[45px] text-white text-[28px] text-center mb-10 w-fit mx-auto">
-          Ready to Transform Your Space?
+            <h1 className="font-bold md:text-[45px] text-white text-[28px] text-center mb-10 w-fit mx-auto">
+              Ready to Transform Your Space?
             </h1>
             <p className="py-4 text-lg text-emerald-700 dark:text-emerald-300">
               Let's bring your vision to life. Contact us today for a free consultation.
             </p>
-            <a href="#contact" className="btn btn-primary">Get in Touch</a>
+            <a className="btn btn-primary" onClick={toggleModal}>Get in Touch</a>
           </div>
         </section>
       </main>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div className="modal modal-open bg-transparent">
+          <div className="bg-transparent">
+
+            <div className="modal-action">
+              <button className="mb-4" onClick={toggleModal}>
+                <XCircleIcon />
+              </button>
+            </div>
+            <LeadModel />
+          </div>
+        </div>
+      )}
 
       {/* Footer */}
       <footer className="footer items-center p-4 bg-base-100 text-base-content border-t">

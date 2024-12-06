@@ -1,9 +1,9 @@
 import React from "react";
 import Logo from "../assets/navlogo.svg"
-import { Phone } from "lucide-react";
+import { Contact, Phone, PhoneIcon } from "lucide-react";
 const Header: React.FC = ({ onClick }: any) => {
     return (
-        <header className="navbar bg-base-100 dark:bg-emerald-700 px-4 lg:px-6">
+        <header className="navbar bg-white px-4 lg:px-6">
             <div className="flex-1">
                 <a className="btn btn-ghost normal-case text-xl flex items-center" href="#">
                     <div className="flex md:gap-3 text-white items-center justify-center gap-2 font-semibold text-xl md:text-2xl">
@@ -11,10 +11,12 @@ const Header: React.FC = ({ onClick }: any) => {
                     </div>
                 </a>
             </div>
-      
-            <button type="button" onClick={onClick} className="btn  bg-emerald-600 border-0 hover:bg-emerald-500">
-                <Phone color="white" />
-            </button>
+            <a href="https://api.whatsapp.com/send?phone=+917892516337&text=Hello,%20I%20would%20like%20to%20know%20more%20about%20Your%Designs" target="_blank" rel="noopener noreferrer">
+                <button type="button" onClick={onClick} className="btn  bg-yellow-200 hover:bg-yellow-300 text-zinc-700 border-0 ">
+                    Get In Touch
+                    <PhoneIcon />
+                </button>
+            </a>
         </header>
     );
 };
