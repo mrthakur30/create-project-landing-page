@@ -140,7 +140,7 @@ const Form = () => {
                     },
                     body: JSON.stringify(userToSend),
                 }).then(() => {
-                    window.location.href = `${DASHBOARD_URL}/redirect?To=${'design-ai'}&Id=${data.Id}&Token=${data.Token}&Session=${data.Session}&Name=${data.Name}&Email=${data.Email}&Currency=${data.Currency}&Phone=${data.Phone}&PCode=${data.PCode}&RecId=${data.RecId}`;
+                    window.location.href = `${DASHBOARD_URL}/redirect?To=${'projects'}&Id=${data.Id}&Token=${data.Token}&Session=${data.Session}&Name=${data.Name}&Email=${data.Email}&Currency=${data.Currency}&Phone=${data.Phone}&PCode=${data.PCode}&RecId=${data.RecId}`;
                     toast.success("Registered successfully!");
                 }).catch((error) => error.response.json());
             }
