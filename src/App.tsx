@@ -12,6 +12,7 @@ import Image5 from "./assets/architecture/image5.png";
 import Image6 from "./assets/architecture/image6.png";
 import LeadModel from "./components/LeadModel";
 import {  XCircleIcon } from "lucide-react";
+import DesignElementaryFAQ from "./components/FAQ";
 
 const ArchitectureData = [
   {
@@ -144,6 +145,8 @@ export default function App() {
           </div>
         </div>
       )}
+
+      <DesignElementaryFAQ />
 
       {/* Footer */}
       <footer className="footer items-center p-4 bg-base-100 text-base-content border-t">
